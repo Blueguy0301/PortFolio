@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+@layer base {
+  body {
+    @apply bg-[#ffe7cc];
+    @apply overflow-x-hidden;
+  }
+  #root {
+    @apply overflow-x-hidden;
+  }
+}
+.inverted {
+  @apply skew-x-[45deg];
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-blue-800;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffe7cc;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.sub-hero-text {
+  margin-top: 1rem;
+  margin-bottom: auto;
+}
+.left {
+  @apply bg-blue-700;
+  @apply z-20;
+  width: 50% !important;
+}
+#left {
+  @apply text-[#FFE7CC];
+}
+#right {
+  @apply text-blue-700;
+}
+.right {
+  @apply bg-[#FFE7CC];
+}
+.hero-text {
+  @apply text-6xl;
+  margin: 0px 10vw;
+  text-align: center;
+  width: 80vw;
+}
+#visual-svg {
+  position: absolute;
+  z-index: -1;
+}
+.side {
+  @apply grid;
+  @apply place-items-end;
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+.bottom {
+  @apply mb-5;
+}
+#facebook,
+#Telegram,
+#Mail,
+#Github {
+  overflow: visible;
+  /* fill: #4267B2; // original */ /* display: unset; */
+  @apply w-20;
+  @apply h-20;
+  @apply stroke-blue-700;
+  /* @apply fill-blue-800; */
+  fill-opacity: 1;
+  stroke-width: 30;
+  stroke-dasharray: 5000;
+  animation-delay: 500ms;
+  animation: removeDash 1s forwards;
+  display: unset;
+}
+#facebook:hover,
+#Telegram:hover,
+#Mail:hover,
+#Github:hover {
+  animation: hovertest 2s forwards;
+}
+.svg-btn:after {
+  content: attr(data-text);
+  display: block;
+  text-align: center;
+  width: inherit;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 5rem;
+  margin-bottom: 10px;
+}
+.svg-btn:hover:after {
+  opacity: 1;
+}
+.projects {
+  flex-direction: column;
+  flex-wrap: nowrap !important;
+}
+.swiper-projects {
+  height: 100%;
+}

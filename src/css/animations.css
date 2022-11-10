@@ -1,0 +1,62 @@
+.circle {
+  opacity: 0;
+  stroke: #083aa9;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  stroke-width: 5;
+  fill: none;
+}
+.show {
+  animation: show-Circles 1.5s;
+  animation-delay: 250ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+.hide {
+  animation: hide-Circles 1.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease;
+}
+@keyframes show-Circles {
+  from {
+    fill-opacity: 0;
+    opacity: 1;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    fill-opacity: 1;
+
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes hide-Circles {
+  from {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+  to {
+    opacity: 0;
+    stroke-dashoffset: 1000;
+  }
+}
+@keyframes hovertest {
+  from {
+    fill-opacity: 1;
+    stroke-dashoffset: 5000;
+  }
+  to {
+    fill-opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes removeDash {
+  from {
+    fill-opacity: 0;
+    stroke-dashoffset: 000;
+  }
+  to {
+    fill-opacity: 1;
+    stroke-dashoffset: 5000;
+  }
+}
