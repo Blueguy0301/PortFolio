@@ -18,9 +18,9 @@ const SQLiteLogo = () => {
           id="A"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#97d9f6" offset="0%" />
-          <stop stop-color="#0f80cc" offset="92.024%" />
-          <stop stop-color="#0f80cc" offset="100%" />
+          <stop stopColor="#97d9f6" offset="0%" />
+          <stop stopColor="#0f80cc" offset="92.024%" />
+          <stop stopColor="#0f80cc" offset="100%" />
         </linearGradient>
       </defs>
       <path

@@ -1,11 +1,11 @@
 import Screen from "./Screen"
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useState } from "react"
 import { useInView } from "react-intersection-observer"
-import "../css/animations.css"
 import Facebook from "./svgs/Facebook"
 import Telegram from "./svgs/Telegram"
 import Mail from "./svgs/Mail"
 import Github from "./svgs/Github"
+import "../css/animations.css"
 const AboutMe = () => {
   const { ref, inView, entry } = useInView({
     rootMargin: "0px",

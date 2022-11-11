@@ -18,10 +18,10 @@ const PhpLogo = () => {
           r="1"
           spreadMethod="pad"
         >
-          <stop offset="0" stop-color="#aeb2d5" />
-          <stop offset=".3" stop-color="#aeb2d5" />
-          <stop offset=".75" stop-color="#484c89" />
-          <stop offset="1" stop-color="#484c89" />
+          <stop offset="0" stopColor="#aeb2d5" />
+          <stop offset=".3" stopColor="#aeb2d5" />
+          <stop offset=".75" stopColor="#484c89" />
+          <stop offset="1" stopColor="#484c89" />
         </radialGradient>
         <clipPath id="C">
           <path d="M0 324h576V0H0v324z" />

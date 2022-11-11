@@ -16,7 +16,7 @@ const SwiperData = {
   loop: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false,
+    disableOnInteraction: true,
   },
   pagination: {
     clickable: true,
@@ -37,9 +37,7 @@ const Projects = () => {
     <div data-aos="fade-right">
       <Screen className="relative projects">
         <>
-          <h1 className="text-6xl text-center  text-blue-700  w-screen flex-shrink relative z-10">
-            Projects
-          </h1>
+          <h1>Projects</h1>
           <SideBar open={open} setOpen={setOpen} data={projectData} />
 
           <div className="flex-grow max-height-[100%]">
@@ -54,13 +52,21 @@ const Projects = () => {
                       className="image"
                     />
                     <div className="absolute bottom-0 w-[100%] h-1/4  bg-black/75 p-3">
-                      <h2 className="text-blue-600 text-3xl">
-                        {project.title}
-                      </h2>
+                      <div className="text">
+                        <h2 className="text-blue-600 text-3xl">
+                          {project.title}
+                        </h2>
 
-                      <p className="text-lg text-white">{project.shortDesc}</p>
-                      <button type="button" onClick={handleOnclick(project)}>
-                        open sidebar
+                        <p className="text-base text-white line-clamp-2">
+                          {project.shortDesc}
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={handleOnclick(project)}
+                        className="bg-blue-800  text-white p-3 rounded-xl absolute bottom-2 right-3"
+                      >
+                        Learn More
                       </button>
                     </div>
                   </SwiperSlide>

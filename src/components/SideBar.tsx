@@ -1,5 +1,6 @@
 import React, { Fragment, useMemo } from "react"
 import { Dialog, Transition } from "@headlessui/react"
+import GitHubButton from "react-github-btn"
 import ReactLogo from "./svgs/stacks/ReactLogo"
 import ExpressLogo from "./svgs/stacks/ExpressLogo"
 import MongoDBLogo from "./svgs/stacks/MongoDBLogo"
@@ -7,6 +8,7 @@ import SQLiteLogo from "./svgs/stacks/SQLiteLogo"
 import PhpLogo from "./svgs/stacks/PhpLogo"
 import NodeJsLogo from "./svgs/stacks/NodeJsLogo"
 import Tailwind from "./svgs/stacks/Tailwind"
+import Sass from "./svgs/stacks/Sass"
 type tech = {
   title?: string
   shortDesc?: string
@@ -15,6 +17,7 @@ type tech = {
   TechStack?: string[]
   Features?: string[]
   image?: string
+  repoLink?: string
 }
 type sideBarProps = {
   open: boolean
@@ -47,6 +50,9 @@ export default function SideBar(props: sideBarProps) {
         }
         if (tech.includes("Tailwind")) {
           return <Tailwind key={tech} />
+        }
+        if (tech.includes("Sass")) {
+          return <Sass key={tech} />
         }
       }) ?? []
     )
@@ -107,37 +113,57 @@ export default function SideBar(props: sideBarProps) {
                       </button>
                     </div>
                   </Transition.Child>
-                  <div className="flex h-full flex-col  bg-white py-6 shadow-xl p-3">
+                  <div className="flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl">
                     <div className="px-4 sm:px-6">
                       <Dialog.Title className="text-lg font-medium text-gray-900">
                         {data.title}
                       </Dialog.Title>
                     </div>
-                    <div className="relative mt-6 flex-1 px-4 sm:px-6 ">
+                    <div className="relative mt-6 flex-1 px-4 sm:px-6">
                       {/* Replace with your content */}
-                      <div className="absolute px-4 sm:px-6 w-[100%]">
-                        <h4 className="text-lg text-blue-700">
+                      <div className="absolute inset-0 px-4 sm:px-6">
+                        <h4 className="text-lg text-blue-700 py-5">
                           About {data.title ?? "this project"}
                         </h4>
-                        <p className="text-l">{data.Desc}</p>
-                        <h4 className="text-lg text-blue-700">Features</h4>
-                        <ul className="list-disc p-1">
-                          {data?.Features?.map((text, i) => {
-                            console.log(text)
-                            return (
-                              <li className="relative -right-10">
-                                <span className="relative -left-2" key={i}>
-                                  {text}
-                                </span>
-                              </li>
-                            )
-                          })}
-                        </ul>
+                        <p className="text-l ml-5 text-justify">{data.Desc}</p>
+                        {data.Features && (
+                          <>
+                            <h4 className="text-lg text-blue-700 py-2">
+                              Features
+                            </h4>
+                            <ul className="list-disc p-1">
+                              {data?.Features?.map((text, i) => {
+                                // console.log(text)
+                                return (
+                                  <li
+                                    className="relative ml-5 text-justify"
+                                    key={i}
+                                  >
+                                    {text}
+                                  </li>
+                                )
+                              })}
+                            </ul>
+                          </>
+                        )}
+                        {/* tech stack */}
                         <div>
-                          <h4 className="text-lg text-blue-700">Tech Stack</h4>
-                          <div className="logos flex-row flex gap-1 items-center justify-evenly w-[100%]">
+                          <h4 className="text-lg text-blue-700 py-2">
+                            Tech Stack
+                          </h4>
+                          <div className="logos flex-row flex gap-1 items-center justify-evenly w-[100%] flex-wrap">
                             {techStack}
                           </div>
+                        </div>
+                        <div className="btn-group">
+                          <h4 className="text-lg text-blue-700 py-2">Links</h4>
+                          <GitHubButton
+                            href={data?.repoLink ?? ""}
+                            data-size="large"
+                            aria-label="Repository on GitHub"
+                          >
+                            Repository
+                          </GitHubButton>
                         </div>
                       </div>
                       {/* /End replace */}

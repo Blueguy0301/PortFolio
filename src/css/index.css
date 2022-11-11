@@ -12,6 +12,15 @@ html {
   #root {
     @apply overflow-x-hidden;
   }
+  h1 {
+    @apply text-6xl;
+    @apply text-center;
+    @apply text-blue-700;
+    @apply w-screen;
+    @apply flex-shrink;
+    @apply relative;
+    @apply z-10;
+  }
 }
 .inverted {
   @apply skew-x-[45deg];
@@ -133,4 +142,7 @@ html {
 .swiper-slide {
   position: relative;
   margin: auto;
+}
+.swiper-pagination {
+  width: 50% !important;
 }
