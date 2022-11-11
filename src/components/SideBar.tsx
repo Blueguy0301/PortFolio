@@ -6,6 +6,7 @@ import MongoDBLogo from "./svgs/stacks/MongoDBLogo"
 import SQLiteLogo from "./svgs/stacks/SQLiteLogo"
 import PhpLogo from "./svgs/stacks/PhpLogo"
 import NodeJsLogo from "./svgs/stacks/NodeJsLogo"
+import Tailwind from "./svgs/stacks/Tailwind"
 type tech = {
   title?: string
   shortDesc?: string
@@ -13,6 +14,7 @@ type tech = {
   Link?: string
   TechStack?: string[]
   Features?: string[]
+  image?: string
 }
 type sideBarProps = {
   open: boolean
@@ -23,26 +25,31 @@ type sideBarProps = {
 export default function SideBar(props: sideBarProps) {
   const { open, setOpen, data } = props
   const techStack = useMemo(() => {
-    return data?.TechStack?.map((tech) => {
-      if (tech.includes("React")) {
-        return <ReactLogo key={tech} />
-      }
-      if (tech.includes("Express")) {
-        return <ExpressLogo key={tech} />
-      }
-      if (tech.includes("MongoDB")) {
-        return <MongoDBLogo key={tech} />
-      }
-      if (tech.includes("SQLite")) {
-        return <SQLiteLogo key={tech} />
-      }
-      if (tech.includes("PHP")) {
-        return <PhpLogo key={tech} />
-      }
-      if (tech.includes("NodeJS")) {
-        return <NodeJsLogo key={tech} />
-      }
-    })
+    return (
+      data?.TechStack?.map((tech) => {
+        if (tech.includes("React")) {
+          return <ReactLogo key={tech} />
+        }
+        if (tech.includes("Express")) {
+          return <ExpressLogo key={tech} />
+        }
+        if (tech.includes("MongoDB")) {
+          return <MongoDBLogo key={tech} />
+        }
+        if (tech.includes("SQLite")) {
+          return <SQLiteLogo key={tech} />
+        }
+        if (tech.includes("PHP")) {
+          return <PhpLogo key={tech} />
+        }
+        if (tech.includes("NodeJS")) {
+          return <NodeJsLogo key={tech} />
+        }
+        if (tech.includes("Tailwind")) {
+          return <Tailwind key={tech} />
+        }
+      }) ?? []
+    )
   }, [data])
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -129,7 +136,7 @@ export default function SideBar(props: sideBarProps) {
                         <div>
                           <h4 className="text-lg text-blue-700">Tech Stack</h4>
                           <div className="logos flex-row flex gap-1 items-center justify-evenly w-[100%]">
-                            {techStack?.map((tech) => tech)}
+                            {techStack}
                           </div>
                         </div>
                       </div>

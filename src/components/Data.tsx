@@ -18,7 +18,7 @@ export const Projects = [
     shortDesc: "10",
     Desc: "Description of the title",
     Link: "#",
-    TechStack: ["React (TS)", "TypeScript"],
+    TechStack: ["React (TS)", "TypeScript", "Tailwind"],
     Features: [
       "feature 1",
       "feature 1",
@@ -27,6 +27,7 @@ export const Projects = [
       "feature 1",
       "feature 1",
     ],
+    image: "/assets/portfolio.png",
   },
   {
     title: "Emperia",
@@ -42,6 +43,7 @@ export const Projects = [
       "feature 1",
       "feature 1",
     ],
+    image: "/assets/Emperia.png",
   },
   {
     title: "Megane",
@@ -57,5 +59,6 @@ export const Projects = [
       "feature 1",
       "feature 1",
     ],
+    image: "/assets/portFolio",
   },
 ]

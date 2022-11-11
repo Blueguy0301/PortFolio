@@ -80,7 +80,9 @@ const AboutMe = () => {
           </div>
           <div className="group-right flex-grow">picture here</div>
           <div className=" bottom w-screen ">
-            <h3 className="text-blue-800 text-2xl text-center"> Socials</h3>
+            <h3 className="text-blue-800 text-2xl text-center">
+              Social Networks
+            </h3>
             <div className="flex flex-wrap items-center justify-evenly flex-row  gap-3">
               <div className="grow flex justify-evenly items-center">
                 <Telegram />
