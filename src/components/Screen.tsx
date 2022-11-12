@@ -1,12 +1,12 @@
-import type {ReactElement} from "react";
+import type { ReactElement } from "react"
 type propTypes = {
-  children: ReactElement;
-  className?: string;
-  ref?: any;
-};
+  children: ReactElement
+  className?: string
+  ref?: any
+}
 const Screen = (props: propTypes) => {
   if (props.ref) {
-    console.log("first");
+    console.log("first")
     return (
       <div
         className={`h-screen flex flex-wrap ${props?.className ?? ""}`}
@@ -14,14 +14,18 @@ const Screen = (props: propTypes) => {
       >
         {props.children}
       </div>
-    );
+    )
   } else {
     return (
-      <div className={`h-screen flex flex-wrap ${props?.className ?? ""}`}>
+      <div
+        className={`screen min-h-screen flex flex-wrap ${
+          props?.className ?? ""
+        } `}
+      >
         {props.children}
       </div>
-    );
+    )
   }
-};
+}
 
-export default Screen;
+export default Screen

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react"
-import Screen from "./Screen"
-import TypeWritter from "./TypeWritter"
+import { useEffect, useState } from "react"
+import Screen from "../Screen"
+import TypeWritter from "../TypeWritter"
 const Hero = () => {
   const heroText = "Robert A. Johnson"
   return (

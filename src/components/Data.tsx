@@ -19,7 +19,7 @@ export const Projects = [
     Desc: "Description of the title",
     Link: "#",
     TechStack: ["React (TS)", "TypeScript", "Tailwind"],
-    image: "/assets/portfolio.png",
+    image: "/assets/projects/portfolio.png",
     repoLink: "https://github.com/Blueguy0301/PortFolio",
   },
   {
@@ -34,7 +34,7 @@ export const Projects = [
       "Signing in using the organization email.",
       "for non-organization email users, they can be invited via invite code.",
     ],
-    image: "/assets/Emperia.png",
+    image: "/assets/projects/Emperia.png",
     repoLink: "https://github.com/Blueguy0301/Emperia",
   },
   {
@@ -49,12 +49,29 @@ export const Projects = [
       "Creates a new QR code for barcode-less products",
       "Invoicing Purchase History, Credits, Daily income and total profit",
     ],
-    image: "/assets/Megane.png",
+    image: "/assets/projects/Megane.png",
     repoLink: "https://github.com/Blueguy0301/Megane",
   },
 ]
-export const frontEndskills = ["React", "HTML", "CSS", "Tailwind", "Sass"]
-export const backEndSkills = ["PHP, Express", "NodeJS"]
-export const devOpsSkills = ["Azure"]
-export const versionControlSkills = ["Git", "Github"]
-export const DataBaseSkills = ["MongoDB", "MYSQL"]
+
+export const all = [
+  { stack: "React", skillType: "Front End" },
+  { stack: "HTML", skillType: "Front End" },
+  { stack: "CSS", skillType: "Front End" },
+  { stack: "JavaScript", skillType: "Front End" },
+  { stack: "TypeScript", skillType: "Front End" },
+  { stack: "Tailwind", skillType: "Front End" },
+  { stack: "Sass", skillType: "Front End" },
+  { stack: "PHP", skillType: "Back End" },
+  { stack: "Express", skillType: "Back End" },
+  { stack: "NodeJS", skillType: "Back End" },
+  { stack: "Azure", skillType: "DevOps" },
+  { stack: "Git", skillType: "Version Control" },
+  { stack: "GitHub", skillType: "Version Control" },
+  { stack: "MongoDB", skillType: "Database" },
+  { stack: "MYSQL", skillType: "Database" },
+  { stack: "Figma", skillType: "UI" },
+  { stack: "Photoshop", skillType: "UI" },
+].map((data, i) => {
+  return { ...data, id: i }
+})

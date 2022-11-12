@@ -1,11 +1,10 @@
 import { useEffect } from "react"
-import Hero from "./components/Hero"
-import Projects from "./components/Projects"
-import Screen from "./components/Screen"
-import AboutMe from "./components/AboutMe"
+import Hero from "./components/Screens/Hero"
+import AboutMe from "./components/Screens/AboutMe"
+import Technologies from "./components/Screens/Technologies"
 import AOS from "aos"
+import Projects from "./components/Screens/Projects"
 import "aos/dist/aos.css"
-import Technologies from "./components/Technologies"
 
 function App() {
   useEffect(() => {

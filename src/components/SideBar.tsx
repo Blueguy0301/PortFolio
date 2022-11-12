@@ -155,7 +155,7 @@ export default function SideBar(props: sideBarProps) {
                             {techStack}
                           </div>
                         </div>
-                        <div className="btn-group">
+                        <div>
                           <h4 className="text-lg text-blue-700 py-2">Links</h4>
                           <GitHubButton
                             href={data?.repoLink ?? ""}
