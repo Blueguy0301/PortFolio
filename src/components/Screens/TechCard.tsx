@@ -1,14 +1,13 @@
 import { memo } from "react"
 import { usePresence, motion } from "framer-motion"
 type TechCardProps = {
-  id: string
   stack: string
 }
-const TechCard = ({ id, stack }: TechCardProps) => {
+const TechCard = ({ stack }: TechCardProps) => {
   const [isPresent, safeToRemove] = usePresence()
   const animation = {
     layout: true,
-    layoutId: id,
+    layoutId: stack,
     initial: "out",
     animate: isPresent ? "in" : "out",
     onAnimationComplete: () => !isPresent && safeToRemove(),
@@ -21,17 +20,17 @@ const TechCard = ({ id, stack }: TechCardProps) => {
   return (
     <motion.div
       {...animation}
-      className="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 card"
+      className=" bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 card"
     >
       <>
-        {/* <img
-          src={`/assets/svg/${stack}`}
-          className=""
+        <img
+          src={`/assets/stacks/${stack}.svg`}
+          className="m-auto"
           alt="Tech Pic"
           loading="lazy"
-        /> */}
+        />
         <div className="p-5">
-          <h5 className="text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="text-center text-lg font-bold tracking-tight text-gray-900 dark:text-white ">
             {stack}
           </h5>
         </div>

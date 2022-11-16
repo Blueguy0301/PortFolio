@@ -21,7 +21,7 @@ const buttons = [
   "DevOps",
   "Database",
 ]
-type techStack = { stack: string; skillType: string; id: number }
+type techStack = { stack: string; skillType: string }
 
 const isSelected = "isSelected"
 
@@ -40,46 +40,38 @@ const Technologies = () => {
   }, [])
 
   return (
-    <Screen>
+    <Screen className="flex-col relative">
       <>
-        <div className="py-4">
-          <h1 className="text-4xl">Techonologies</h1>
-          <div className="btn-group">
-            {buttons.map((buttonName) => (
-              <button
-                type="button"
-                key={buttonName}
-                onClick={setTypeSkills(buttonName)}
-                className={`button-small button ${
-                  selected === buttonName ? isSelected : ""
-                }`}
-              >
-                {buttonName}
-              </button>
-            ))}
-          </div>
-          <div className="tech-container">
-            <motion.div
-              className="technologies "
-              variants={container}
-              initial="hidden"
-              animate="show"
+        <h1 className="tech leading-loose">Techonologies</h1>
+        <div className="btn-group">
+          {buttons.map((buttonName) => (
+            <button
+              type="button"
+              key={buttonName}
+              onClick={setTypeSkills(buttonName)}
+              className={`button-small button ${
+                selected === buttonName ? isSelected : ""
+              }`}
             >
-              <LayoutGroup>
-                <AnimatePresence>
-                  {items
-                    ?.sort((a, b) => a.id - b.id)
-                    .map((item, i) => (
-                      <TechCard
-                        id={`${item.id}`}
-                        stack={item.stack}
-                        key={item.id}
-                      />
-                    ))}
-                </AnimatePresence>
-              </LayoutGroup>
-            </motion.div>
-          </div>
+              {buttonName}
+            </button>
+          ))}
+        </div>
+        <div className="tech-container">
+          <motion.div
+            className="technologies"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
+            <LayoutGroup>
+              <AnimatePresence>
+                {items.map((item) => (
+                  <TechCard stack={item.stack} key={item.stack} />
+                ))}
+              </AnimatePresence>
+            </LayoutGroup>
+          </motion.div>
         </div>
       </>
     </Screen>

@@ -1,14 +1,6 @@
 import React, { Fragment, useMemo } from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import GitHubButton from "react-github-btn"
-import ReactLogo from "./svgs/stacks/ReactLogo"
-import ExpressLogo from "./svgs/stacks/ExpressLogo"
-import MongoDBLogo from "./svgs/stacks/MongoDBLogo"
-import SQLiteLogo from "./svgs/stacks/SQLiteLogo"
-import PhpLogo from "./svgs/stacks/PhpLogo"
-import NodeJsLogo from "./svgs/stacks/NodeJsLogo"
-import Tailwind from "./svgs/stacks/Tailwind"
-import Sass from "./svgs/stacks/Sass"
 type tech = {
   title?: string
   shortDesc?: string
@@ -30,30 +22,15 @@ export default function SideBar(props: sideBarProps) {
   const techStack = useMemo(() => {
     return (
       data?.TechStack?.map((tech) => {
-        if (tech.includes("React")) {
-          return <ReactLogo key={tech} />
-        }
-        if (tech.includes("Express")) {
-          return <ExpressLogo key={tech} />
-        }
-        if (tech.includes("MongoDB")) {
-          return <MongoDBLogo key={tech} />
-        }
-        if (tech.includes("SQLite")) {
-          return <SQLiteLogo key={tech} />
-        }
-        if (tech.includes("PHP")) {
-          return <PhpLogo key={tech} />
-        }
-        if (tech.includes("NodeJS")) {
-          return <NodeJsLogo key={tech} />
-        }
-        if (tech.includes("Tailwind")) {
-          return <Tailwind key={tech} />
-        }
-        if (tech.includes("Sass")) {
-          return <Sass key={tech} />
-        }
+        return (
+          <button
+            data-text={tech}
+            className="svg-btn cursor-default"
+            key={tech}
+          >
+            <img src={`/assets/stacks/${tech}.svg`} className="m-auto" />
+          </button>
+        )
       }) ?? []
     )
   }, [data])

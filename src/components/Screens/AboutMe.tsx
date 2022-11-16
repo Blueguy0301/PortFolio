@@ -15,21 +15,16 @@ const AboutMe = () => {
 
   useEffect(() => {
     if (inView) {
-      console.log("in view")
+      // console.log("in view")
       setShow("show")
     } else {
-      console.log("not in view")
+      // console.log("not in view")
       setShow("")
     }
   }, [inView])
   return (
-    <div
-      className="block"
-      ref={ref}
-      data-aos="zoom-out"
-      data-aos-easing="ease-in-sine"
-    >
-      <Screen className="relative flex-col">
+    <div ref={ref} data-aos="zoom-out" data-aos-easing="ease-in-sine">
+      <Screen className="relative flex-row max-w-screen py-4">
         <>
           <svg
             id="visual-svg"
@@ -73,16 +68,50 @@ const AboutMe = () => {
               />
             </g>
           </svg>
-          <div className="group-left ">
+          <div className="w-screen ">
             <h1 className="text-6xl text-center  text-blue-700">
               About Robert
             </h1>
           </div>
-          <div className="group-right flex-grow">picture here</div>
-          <div className=" bottom w-screen ">
-            <h3 className="text-blue-800 text-2xl text-center">
-              Social Networks
-            </h3>
+          <div className="w-1/2 p-5 flex-grow">
+            <img
+              src="/assets/Profile.jpeg"
+              alt=""
+              width="500"
+              height="500"
+              className="m-auto "
+            />
+          </div>
+          <div className="flex-grow w-1/2 px-5  basis-96">
+            <div className="flex-grow">
+              <p className="text-justify bg-blue-700 text-white p-5 rounded-3xl mb-10 ">
+                I am 20 years old and a developer from The Philippines. I am a
+                self taught programmer for over 2 years. I am a full stack web
+                developer. Outside the screen, I am curious person that likes to
+                know how things work. I am also fond of reading and exploring
+                the things I am not familliar with.
+              </p>
+              <div className="bg-blue-700 text-white p-5 rounded-3xl ">
+                <h3 className="text-left text-white"> My hobbies are...</h3>
+                <ul className="list-decimal ml-10">
+                  <li className="mt-3">Manga/Anime</li>
+                  <li className="mt-3">Light Novel</li>
+                  <li className="mt-3">Gaming</li>
+                  <li className="mt-3">Books</li>
+                  <li className="mt-3">Programming</li>
+                </ul>
+              </div>
+            </div>
+            <a
+              className="button-small mt-5 inline-block"
+              href="/assets/resume.pdf"
+              download
+            >
+              Download CV
+            </a>
+          </div>
+          <div className="bottom w-screen flex flex-col justify-end">
+            <h3>My Social Networks</h3>
             <div className="flex flex-wrap items-center justify-evenly flex-row  gap-3">
               <div className="grow flex justify-evenly items-center">
                 <Telegram />

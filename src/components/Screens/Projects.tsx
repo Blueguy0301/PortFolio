@@ -45,7 +45,7 @@ const Projects = () => {
             <Swiper {...SwiperData}>
               {projectsMade.map((project) => {
                 return (
-                  <SwiperSlide className="relative">
+                  <SwiperSlide className="relative" key={project.title}>
                     <img
                       src={project.image}
                       alt="screenshot of the project"

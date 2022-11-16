@@ -21,6 +21,15 @@ html {
     @apply relative;
     @apply z-10;
   }
+  h3 {
+    @apply text-blue-800;
+    @apply text-2xl;
+    @apply text-center;
+  }
+  p,
+  li {
+    @apply text-lg;
+  }
 }
 .inverted {
   @apply skew-x-[45deg];
@@ -75,7 +84,7 @@ html {
   position: absolute;
 }
 .bottom {
-  @apply mb-5;
+  @apply mb-0;
 }
 #facebook,
 #Telegram,
@@ -100,15 +109,20 @@ html {
 #Github:hover {
   animation: hovertest 2s forwards;
 }
+.svg-btn {
+  min-width: 64px;
+  min-height: 64px;
+}
 .svg-btn:after {
   content: attr(data-text);
-  display: block;
-  text-align: center;
+  display: flex;
+  text-align: left;
   width: inherit;
-  position: absolute;
+  position: relative;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  width: 5rem;
   margin-bottom: 10px;
 }
 .svg-btn:hover:after {
@@ -159,13 +173,21 @@ html {
 }
 .btn-group {
   @apply flex;
-  @apply mt-3;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   gap: 1rem;
+  overflow: auto;
+  flex-wrap: wrap;
+  position: relative;
+  /* flex-grow: 1; */
+  padding: 0 1rem;
 }
 .button {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-grow: 1;
   transition: all 500ms ease-in-out;
 }
 .button:hover {
@@ -180,7 +202,7 @@ html {
 }
 /* parent */
 .technologies {
-  @apply p-8;
+  @apply p-6;
   display: flex;
   flex-wrap: wrap;
   flex-basis: 50%;
@@ -188,11 +210,32 @@ html {
   gap: 1rem;
   align-items: flex-start;
   justify-content: center;
+  flex-grow: 1;
+  height: inherit;
+  flex-basis: 100%;
 }
 /* child */
 .technologies .card {
-  flex-basis: 20%;
+  @apply p-3;
+  min-width: 10%;
+  flex-basis: 100px;
   flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 150px;
+  max-height: 150px;
+  max-width: 10rem;
+  min-width: 9.5rem;
+}
+.technologies .card h5,
+.tech {
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tech-container {
+  overflow: hidden;
+  width: 100%;
+  min-height: 50vh;
 }
 .screen {
   max-width: 100%;
