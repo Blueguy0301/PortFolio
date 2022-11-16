@@ -34,9 +34,9 @@ const Projects = () => {
   }, [])
   return (
     <div data-aos="fade-right">
-      <Screen className="relative projects">
+      <Screen className="relative projects py-12">
         <>
-          <h1 className="absolute   top-10">
+          <h1 className="absolute   top-20">
             <span className="md:bg-white p-3 rounded-xl">Projects</span>
           </h1>
           <SideBar open={open} setOpen={setOpen} data={projectData} />
