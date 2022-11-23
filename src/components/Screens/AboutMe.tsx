@@ -24,7 +24,7 @@ const AboutMe = () => {
   }, [inView])
   return (
     <div ref={ref} data-aos="zoom-out" data-aos-easing="ease-in-sine">
-      <Screen className="relative flex-row max-w-screen py-4">
+      <Screen className="relative flex-row">
         <>
           <svg
             id="visual-svg"
@@ -75,12 +75,23 @@ const AboutMe = () => {
           </div>
           <div className="w-1/2 p-5 flex-grow">
             <img
-              src="/assets/Profile.jpeg"
+              src="/assets/Untitled.png"
               alt=""
-              width="500"
-              height="500"
+              width="300"
+              height="300"
               className="m-auto "
             />
+            <div className="bottom mt-20  flex flex-col justify-end">
+              <h3>My Social Networks</h3>
+              <div className="flex flex-wrap items-center justify-evenly flex-row  gap-3">
+                <div className="grow flex justify-evenly items-center">
+                  <Telegram />
+                  <Facebook />
+                  <Mail />
+                  <Github />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="flex-grow w-1/2 px-5  basis-96">
             <div className="flex-grow">
@@ -109,17 +120,6 @@ const AboutMe = () => {
             >
               Download CV
             </a>
-          </div>
-          <div className="bottom w-screen flex flex-col justify-end">
-            <h3>My Social Networks</h3>
-            <div className="flex flex-wrap items-center justify-evenly flex-row  gap-3">
-              <div className="grow flex justify-evenly items-center">
-                <Telegram />
-                <Facebook />
-                <Mail />
-                <Github />
-              </div>
-            </div>
           </div>
         </>
       </Screen>

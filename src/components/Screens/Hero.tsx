@@ -4,7 +4,7 @@ import TypeWritter from "../TypeWritter"
 const Hero = () => {
   const heroText = "Robert A. Johnson"
   return (
-    <Screen className="relative">
+    <Screen className="relative max-h-screen">
       <>
         <div className="wrapper">
           <div className="side left">

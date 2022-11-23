@@ -238,5 +238,6 @@ html {
   min-height: 50vh;
 }
 .screen {
+  min-height: 100vh;
   max-width: 100%;
 }
