@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react"
 import Screen from "../Screen"
+import { useInView } from "react-intersection-observer"
 import TypeWritter from "../TypeWritter"
-const Hero = () => {
+import type { screenProps } from "../../types"
+import useObserver from "./useObserver"
+const Hero = ({ setActive }: screenProps) => {
+  const { ref } = useObserver({ setActive }, "Hero")
   const heroText = "Robert A. Johnson"
   return (
-    <Screen className="relative max-h-screen">
+    <Screen className="relative max-h-screen" id="heroText" ref={ref}>
       <>
         <div className="wrapper">
           <div className="side left">

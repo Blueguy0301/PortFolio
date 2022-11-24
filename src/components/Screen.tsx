@@ -1,15 +1,26 @@
-import type { ReactElement } from "react"
+import type { LegacyRef, ReactElement } from "react"
+import { forwardRef } from "react"
 type propTypes = {
   children: ReactElement
   className?: string
-  ref?: any
+  [x: string]: any
 }
-const Screen = (props: propTypes) => {
-  return (
-    <div className={`screen  flex flex-wrap ${props?.className ?? ""} `}>
-      {props.children}
-    </div>
-  )
-}
+
+const Screen = forwardRef(
+  (
+    { children, className, ...rest }: propTypes,
+    ref: LegacyRef<HTMLDivElement> | undefined
+  ) => {
+    return (
+      <div
+        className={`screen  flex flex-wrap ${className ?? ""} `}
+        {...rest}
+        ref={ref}
+      >
+        {children}
+      </div>
+    )
+  }
+)
 
 export default Screen

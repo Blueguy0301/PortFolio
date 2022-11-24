@@ -3,6 +3,8 @@ import { motion, LayoutGroup, AnimatePresence } from "framer-motion"
 import { useState, useCallback } from "react"
 import TechCard from "./TechCard"
 import { all } from "../Data"
+import type { screenProps } from "../../types"
+import useObserver from "./useObserver"
 const container = {
   hidden: { scale: 0 },
   show: {
@@ -22,10 +24,9 @@ const buttons = [
   "Database",
 ]
 type techStack = { stack: string; skillType: string }
-
 const isSelected = "isSelected"
 
-const Technologies = () => {
+const Technologies = ({ setActive }: screenProps) => {
   const [selected, setSelected] = useState("All")
   const [items, setItems] = useState<techStack[]>(all)
   const setTypeSkills = useCallback((typeSelected: string) => {
@@ -38,11 +39,11 @@ const Technologies = () => {
       }
     }
   }, [])
-
+  const { ref } = useObserver({ setActive }, "Technologies")
   return (
-    <Screen className="flex-col relative">
+    <Screen className="flex-col relative" id="techs" ref={ref}>
       <>
-        <h1 className="tech leading-loose">Techonologies</h1>
+        <h1 className="tech leading-normal">Techonologies</h1>
         <div className="btn-group">
           {buttons.map((buttonName) => (
             <button

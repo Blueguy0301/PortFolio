@@ -161,7 +161,14 @@ html {
 .swiper-pagination {
   width: 50% !important;
 }
-
+.scroller {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  z-index: 100;
+  transition: all 1s ease-in-out;
+}
 .button-small {
   @apply p-2;
   @apply bg-blue-800;
@@ -240,4 +247,8 @@ html {
 .screen {
   min-height: 100vh;
   max-width: 100%;
+}
+.active {
+  background-color: #ffe7cc !important;
+  color: black !important;
 }

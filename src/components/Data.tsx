@@ -73,3 +73,4 @@ export const all = [
   { stack: "Figma", skillType: "UI" },
   { stack: "Photoshop", skillType: "UI" },
 ]
+export const certificates = []
