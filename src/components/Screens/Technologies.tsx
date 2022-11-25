@@ -43,7 +43,7 @@ const Technologies = ({ setActive }: screenProps) => {
   return (
     <Screen className="flex-col relative" id="techs" ref={ref}>
       <>
-        <h1 className="tech leading-normal">Techonologies</h1>
+        <h1 className="tech leading-normal">Technologies</h1>
         <div className="btn-group">
           {buttons.map((buttonName) => (
             <button
