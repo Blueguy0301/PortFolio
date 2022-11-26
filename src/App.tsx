@@ -1,9 +1,10 @@
-import { lazy, Suspense } from "react"
-import Hero from "./components/Screens/Hero"
+import { useEffect, lazy, Suspense } from "react"
 import { useState } from "react"
 import { LazyMotion, m } from "framer-motion"
-import type { Variants } from "framer-motion"
+import LoadingScreen from "./components/LoadingScreen"
 import "./css/burger.css"
+import type { Variants } from "framer-motion"
+import Hero from "./components/Screens/Hero"
 const menuVariant: Variants | undefined = {
   visible: {
     transition: {
@@ -32,28 +33,20 @@ const anchorVariant: Variants | undefined = {
     opacity: 0,
   },
 }
-const AboutMe = lazy(() => {
-  return import("./components/Screens/AboutMe")
-})
-const Technologies = lazy(() => {
-  return import("./components/Screens/Technologies")
-})
-const Certs = lazy(() => {
-  return import("./components/Screens/Certs")
-})
-const Projects = lazy(() => {
-  return import("./components/Screens/Projects")
-})
-const loadFeatures = async () => {
+const loadFeatures = () => {
   const temp: any = import("./features").then((res: any) => res.default)
   return temp
 }
+const AboutMe = lazy(async () => import("./components/Screens/AboutMe"))
+const Technologies = lazy(() => import("./components/Screens/Technologies"))
+const Projects = lazy(() => import("./components/Screens/Projects"))
+const Certs = lazy(() => import("./components/Screens/Certs"))
 
 function App() {
   const [active, setActive] = useState("")
   const [visible, setVisible] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
   const onClickHandle = () => setVisible(false)
-
   return (
     <>
       <LazyMotion features={loadFeatures}>
@@ -126,7 +119,6 @@ function App() {
           </m.a>
         </m.div>
       </LazyMotion>
-
       <button
         type="button"
         className=" fixed top-1 right-1 z-50 "
@@ -141,7 +133,7 @@ function App() {
         </div>
       </button>
       <Hero setActive={setActive} />
-      <Suspense fallback={<>isLoading...</>}>
+      <Suspense fallback={<LoadingScreen isLoading={isLoading} />}>
         <AboutMe setActive={setActive} />
         <Projects setActive={setActive} />
         <Technologies setActive={setActive} />

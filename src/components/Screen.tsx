@@ -1,10 +1,6 @@
-import type { LegacyRef, ReactElement } from "react"
+import type { LegacyRef } from "react"
+import type { propTypes } from "../types"
 import { forwardRef } from "react"
-type propTypes = {
-  children: ReactElement
-  className?: string
-  [x: string]: any
-}
 
 const Screen = forwardRef(
   (

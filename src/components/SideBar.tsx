@@ -1,21 +1,7 @@
-import React, { Fragment, useMemo } from "react"
+import { Fragment, useMemo } from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import GitHubButton from "react-github-btn"
-type tech = {
-  title?: string
-  shortDesc?: string
-  Desc?: string
-  Link?: string
-  TechStack?: string[]
-  Features?: string[]
-  image?: string
-  repoLink?: string
-}
-type sideBarProps = {
-  open: boolean
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>
-  data: tech
-}
+import { sideBarProps } from "../types"
 
 export default function SideBar(props: sideBarProps) {
   const { open, setOpen, data } = props

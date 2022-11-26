@@ -1,8 +1,7 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter"
 import { Developers } from "./Data"
-type writerTypes = {
-  id?: string
-}
+import type { writerTypes } from "../types"
+
 const TypeWritter = ({ id, ...rest }: writerTypes) => {
   const [text]: any = useTypewriter({
     words: Developers,

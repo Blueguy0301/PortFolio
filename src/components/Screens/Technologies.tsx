@@ -3,7 +3,7 @@ import { motion, LayoutGroup, AnimatePresence } from "framer-motion"
 import { useState, useCallback } from "react"
 import TechCard from "./TechCard"
 import { all } from "../Data"
-import type { screenProps } from "../../types"
+import type { screenProps, techStack } from "../../types"
 import useObserver from "./useObserver"
 const container = {
   hidden: { scale: 0 },
@@ -23,7 +23,6 @@ const buttons = [
   "DevOps",
   "Database",
 ]
-type techStack = { stack: string; skillType: string }
 const isSelected = "isSelected"
 
 const Technologies = ({ setActive }: screenProps) => {

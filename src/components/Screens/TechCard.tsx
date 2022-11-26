@@ -1,8 +1,7 @@
 import { memo } from "react"
 import { usePresence, motion } from "framer-motion"
-type TechCardProps = {
-  stack: string
-}
+import type { TechCardProps } from "../../types"
+
 const TechCard = ({ stack }: TechCardProps) => {
   const [isPresent, safeToRemove] = usePresence()
   const animation = {
