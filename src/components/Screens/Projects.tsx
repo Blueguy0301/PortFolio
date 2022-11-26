@@ -41,7 +41,7 @@ const Projects = ({ setActive }: screenProps) => {
     <Screen className="relative projects " id="projects" ref={ref}>
       <>
         <h1 className="absolute   top-20">
-          <span className="md:bg-white p-3 rounded-xl">Projects</span>
+          <span className="md:bg-white p-3 rounded-xl ">Projects</span>
         </h1>
         <SideBar open={open} setOpen={setOpen} data={projectData} />
 
@@ -56,6 +56,7 @@ const Projects = ({ setActive }: screenProps) => {
                     className="image"
                     width={1366}
                     height={768}
+                    loading="lazy"
                   />
                   <div className="absolute bottom-0 w-[100%] h-1/4   bg-black/75 p-3 md:h-1/4">
                     <div className="text">

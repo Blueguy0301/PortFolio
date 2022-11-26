@@ -56,7 +56,7 @@ const AboutMe = ({ setActive }: screenProps) => {
           </g>
         </svg>
         <div className="w-screen ">
-          <h1 className="text-6xl text-center  text-blue-700">About Robert</h1>
+          <h1 className="text-6xl text-center  text-blue-700">About Me</h1>
         </div>
         <div className="w-1/2 p-5 flex-grow">
           <img
@@ -65,6 +65,7 @@ const AboutMe = ({ setActive }: screenProps) => {
             width="300"
             height="300"
             className="m-auto "
+            loading="lazy"
           />
           <div className="bottom mt-20  flex flex-col justify-end">
             <h3>My Social Networks</h3>
@@ -90,10 +91,11 @@ const AboutMe = ({ setActive }: screenProps) => {
             <div className="bg-blue-700 text-white p-5 rounded-3xl ">
               <h3 className="text-left text-white"> My hobbies are...</h3>
               <ul className="list-decimal ml-10">
-                <li className="mt-3">Manga/Anime</li>
-                <li className="mt-3">Light Novel</li>
+                {/* loop this in the future */}
+                <li className="mt-3">Watching Manga/Anime</li>
+                <li className="mt-3">Reading</li>
+                <li className="mt-3">Tinkering</li>
                 <li className="mt-3">Gaming</li>
-                <li className="mt-3">Books</li>
                 <li className="mt-3">Programming</li>
               </ul>
             </div>

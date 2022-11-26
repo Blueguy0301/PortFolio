@@ -5,6 +5,7 @@ import type { screenProps } from "../../types"
 import useObserver from "./useObserver"
 import { certificates } from "../Data"
 import { useState } from "react"
+import Modal from "../Modal"
 
 const certs = ({ setActive }: screenProps) => {
   const { ref } = useObserver({ setActive }, "Certificates")
@@ -32,6 +33,7 @@ const certs = ({ setActive }: screenProps) => {
               )
             })}
           </AnimatePresence>
+          <Modal showModal={open} link={imagelink} setModal={setOpen} />
         </div>
       </>
     </Screen>

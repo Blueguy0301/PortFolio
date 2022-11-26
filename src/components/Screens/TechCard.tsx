@@ -27,7 +27,6 @@ const TechCard = ({ stack }: TechCardProps) => {
           src={`/assets/stacks/${stack}.svg`}
           className="m-auto"
           alt="Tech Pic"
-          loading="lazy"
         />
         <div className="p-5">
           <h5 className="text-center text-lg font-bold tracking-tight text-gray-900 dark:text-white ">

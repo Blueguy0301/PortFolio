@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500&family=Prompt:wght@400;500;600;700;800;900&family=Source+Sans+Pro:wght@200;300;400&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -20,15 +21,18 @@ html {
     @apply flex-shrink;
     @apply relative;
     @apply z-10;
+    font-family: "Prompt", sans-serif;
   }
   h3 {
     @apply text-blue-800;
     @apply text-2xl;
     @apply text-center;
+    font-family: "Libre Franklin", sans-serif;
   }
   p,
   li {
     @apply text-lg;
+    font-family: "Source Sans Pro", sans-serif;
   }
 }
 .inverted {
@@ -133,11 +137,9 @@ html {
   flex-wrap: nowrap !important;
 }
 .swiper-projects {
-  max-height: 100vh;
-  /* max-width: 50%; */
-  min-height: 100px;
-  /* height: 75%; */
-  aspect-ratio: 16/9;
+  width: 100%;
+  /* min-height: 100px; */
+  min-height: 100vh;
 }
 .image {
   pointer-events: none;

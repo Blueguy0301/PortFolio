@@ -35,7 +35,12 @@ const CertBox = ({
       className=" p-10 bg-white  flex flex-col flex-grow justify-center"
     >
       <button type="button" onClick={(e) => onClick()}>
-        <img src={value.image} alt="" className="max-h-72 m-auto h-72" />
+        <img
+          src={value.image}
+          alt=""
+          className="max-h-72 m-auto h-72"
+          loading="lazy"
+        />
       </button>
       <p className="text-blue-700 text-center p-3">{value.title}</p>
     </motion.div>

@@ -6,7 +6,7 @@ import type { screenProps } from "../../types"
 import useObserver from "./useObserver"
 const Hero = ({ setActive }: screenProps) => {
   const { ref } = useObserver({ setActive }, "Hero")
-  const heroText = "Robert A. Johnson"
+  const heroText = "Angelo A. Maminta"
   return (
     <Screen className="relative max-h-screen" id="heroText" ref={ref}>
       <>

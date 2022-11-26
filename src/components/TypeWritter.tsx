@@ -9,6 +9,7 @@ const TypeWritter = ({ id, ...rest }: writerTypes) => {
     deleteSpeed: 50,
     loop: false,
     delaySpeed: 5000,
+    typeSpeed: 50,
   })
   return (
     <h3 className="text-2xl sub-hero-text w-full text-center" id={id}>

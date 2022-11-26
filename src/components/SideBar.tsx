@@ -28,7 +28,11 @@ export default function SideBar(props: sideBarProps) {
             className="svg-btn cursor-default"
             key={tech}
           >
-            <img src={`/assets/stacks/${tech}.svg`} className="m-auto" />
+            <img
+              src={`/assets/stacks/${tech}.svg`}
+              loading="lazy"
+              className="m-auto"
+            />
           </button>
         )
       }) ?? []
