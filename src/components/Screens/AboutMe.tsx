@@ -11,53 +11,12 @@ import useObserver from "../useObserver"
 const AboutMe = ({ setActive }: screenProps) => {
   const { ref, inView } = useObserver({ setActive }, "AboutMe")
   return (
-    <Screen className="relative w-full" id="aboutMe" ref={ref}>
+    <Screen
+      className="relative w-full about bg-blue-500"
+      id="aboutMe"
+      ref={ref}
+    >
       <>
-        <svg
-          id="visual-svg"
-          viewBox="0 0 960 540"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          version="1.1"
-          className="invisible sm:visible "
-          height="100%"
-          width="100%"
-          // viewBox="0 0 100 100"
-          preserveAspectRatio="xMinYMid slice"
-        >
-          <g id="circles" className="">
-            <circle
-              className={`circle ${inView ? "show" : "hide"}`}
-              r="145"
-              cx="42"
-              cy="480"
-            />
-            <circle
-              className={`circle ${inView ? "show" : "hide"}`}
-              r="122"
-              cx="800"
-              cy="542"
-            />
-            <circle
-              className={`circle ${inView ? "show" : "hide"}`}
-              r="119"
-              cx="866"
-              cy="142"
-            />
-            <circle
-              className={`circle ${inView ? "show" : "hide"}`}
-              r="132"
-              cx="24"
-              cy="115"
-            />
-            <circle
-              className={`circle ${inView ? "show" : "hide"}`}
-              r="123"
-              cx="537"
-              cy="183"
-            />
-          </g>
-        </svg>
         <div className="py-3 flex flex-wrap">
           <h1 className="w-full">About Me</h1>
           <div className="w-1/2 text-center flex-grow ">
@@ -76,8 +35,8 @@ const AboutMe = ({ setActive }: screenProps) => {
             >
               Download CV
             </a>
-            <div className="bottom mt-20  flex flex-col justify-end flex-grow w-full">
-              <h3>My Social Networks</h3>
+            <div className="bottom mt-20  flex flex-col justify-end flex-grow w-full ">
+              <h3 className="">My Social Networks</h3>
               <div className="flex flex-wrap items-center justify-evenly flex-row  gap-3">
                 <div className="grow flex justify-evenly items-center">
                   <Telegram />

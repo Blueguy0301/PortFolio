@@ -1,6 +1,6 @@
 import { useEffect, lazy, Suspense } from "react"
 import { useState } from "react"
-import { LazyMotion, m } from "framer-motion"
+import { LazyMotion, m, AnimatePresence } from "framer-motion"
 import LoadingScreen from "./components/LoadingScreen"
 import "./css/burger.css"
 import type { Variants } from "framer-motion"
@@ -49,76 +49,82 @@ function App() {
   const onClickHandle = () => setVisible(false)
   return (
     <>
-      <LazyMotion features={loadFeatures}>
-        <m.div
-          variants={menuVariant}
-          animate={visible ? "visible" : "hidden"}
-          className="fixed bottom-5 z-50 flex w-full flex-wrap items-center justify-evenly gap-3 p-5 bg-blue-800"
-          initial="hidden"
-          transition={{ delayChildren: 3 }}
-        >
-          <h3 className="text-white w-full">Navigation</h3>
-          <m.a
-            onClick={onClickHandle}
-            variants={anchorVariant}
-            custom={1}
-            type="button"
-            className={`button-small ${
-              active === "Hero" && "active"
-            } flex-grow text-center`}
-            href="#heroText"
-          >
-            Home
-          </m.a>
-          <m.a
-            onClick={onClickHandle}
-            variants={anchorVariant}
-            custom={2}
-            href="#aboutMe"
-            type="button"
-            className={`button-small ${
-              active === "AboutMe" && "active"
-            } flex-grow text-center`}
-          >
-            About Me
-          </m.a>
-          <m.a
-            onClick={onClickHandle}
-            variants={anchorVariant}
-            custom={3}
-            href="#projects"
-            type="button"
-            className={`button-small ${
-              active === "Projects" && "active"
-            } flex-grow text-center`}
-          >
-            Projects
-          </m.a>
-          <m.a
-            onClick={onClickHandle}
-            variants={anchorVariant}
-            custom={4}
-            href="#techs"
-            type="button"
-            className={`button-small ${
-              active === "Technologies" && "active"
-            } flex-grow text-center`}
-          >
-            Technologies
-          </m.a>
-          <m.a
-            onClick={onClickHandle}
-            variants={anchorVariant}
-            custom={5}
-            href="#certificates"
-            type="button"
-            className={`button-small ${
-              active === "Certificates" && "active"
-            } flex-grow text-center `}
-          >
-            Certificates
-          </m.a>
-        </m.div>
+      <LazyMotion features={loadFeatures} strict>
+        <AnimatePresence>
+          {visible && (
+            <m.div
+              key="modal"
+              variants={menuVariant}
+              animate={visible ? "visible" : "hidden"}
+              className="fixed bottom-5 z-50 flex w-full flex-wrap items-center justify-evenly gap-3 p-5 bg-blue-800"
+              initial="hidden"
+              transition={{ delayChildren: 3 }}
+              exit="hidden"
+            >
+              <h3 className="text-white w-full">Navigation</h3>
+              <m.a
+                onClick={onClickHandle}
+                variants={anchorVariant}
+                custom={1}
+                type="button"
+                className={`button-small ${
+                  active === "Hero" && "active"
+                } flex-grow text-center`}
+                href="#heroText"
+              >
+                Home
+              </m.a>
+              <m.a
+                onClick={onClickHandle}
+                variants={anchorVariant}
+                custom={2}
+                href="#aboutMe"
+                type="button"
+                className={`button-small ${
+                  active === "AboutMe" && "active"
+                } flex-grow text-center`}
+              >
+                About Me
+              </m.a>
+              <m.a
+                onClick={onClickHandle}
+                variants={anchorVariant}
+                custom={3}
+                href="#projects"
+                type="button"
+                className={`button-small ${
+                  active === "Projects" && "active"
+                } flex-grow text-center`}
+              >
+                Projects
+              </m.a>
+              <m.a
+                onClick={onClickHandle}
+                variants={anchorVariant}
+                custom={4}
+                href="#techs"
+                type="button"
+                className={`button-small ${
+                  active === "Technologies" && "active"
+                } flex-grow text-center`}
+              >
+                Technologies
+              </m.a>
+              <m.a
+                onClick={onClickHandle}
+                variants={anchorVariant}
+                custom={5}
+                href="#certificates"
+                type="button"
+                className={`button-small ${
+                  active === "Certificates" && "active"
+                } flex-grow text-center `}
+              >
+                Certificates
+              </m.a>
+            </m.div>
+          )}
+        </AnimatePresence>
       </LazyMotion>
       <button
         type="button"
