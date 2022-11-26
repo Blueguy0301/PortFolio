@@ -1,12 +1,8 @@
-import type { LegacyRef } from "react"
-import type { propTypes } from "../types"
+import type { propTypes, screenRef } from "../types"
 import { forwardRef } from "react"
 
 const Screen = forwardRef(
-  (
-    { children, className, ...rest }: propTypes,
-    ref: LegacyRef<HTMLDivElement> | undefined
-  ) => {
+  ({ children, className, ...rest }: propTypes, ref: screenRef) => {
     return (
       <div
         className={`screen  flex flex-wrap ${className ?? ""} `}

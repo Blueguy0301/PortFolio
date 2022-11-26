@@ -32,13 +32,15 @@ const CertBox = ({
       variants={squareVariants}
       animate={inView ? "visible" : "hidden"}
       custom={pos}
-      className=" p-10 bg-white  flex flex-col flex-grow justify-center"
+      className=" p-10 bg-white  flex flex-col flex-grow justify-center basis-96"
     >
-      <button type="button" onClick={(e) => onClick()}>
+      <button type="button" onClick={(e) => onClick()} className="flex-grow ">
         <img
           src={value.image}
           alt=""
-          className="max-h-72 m-auto h-72"
+          width="100%"
+          height="100%"
+          className=" m-auto h-full w-full"
           loading="lazy"
         />
       </button>

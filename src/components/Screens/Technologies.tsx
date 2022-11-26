@@ -4,7 +4,7 @@ import { useState, useCallback } from "react"
 import TechCard from "./TechCard"
 import { all } from "../Data"
 import type { screenProps, techStack } from "../../types"
-import useObserver from "./useObserver"
+import useObserver from "../useObserver"
 const container = {
   hidden: { scale: 0 },
   show: {
@@ -41,8 +41,8 @@ const Technologies = ({ setActive }: screenProps) => {
   const { ref } = useObserver({ setActive }, "Technologies")
   return (
     <Screen className="flex-col relative" id="techs" ref={ref}>
-      <>
-        <h1 className="tech leading-normal">Technologies</h1>
+      <div className="py-3">
+        <h1 className="tech leading-normal w-full">Technologies</h1>
         <div className="btn-group">
           {buttons.map((buttonName) => (
             <button
@@ -73,7 +73,7 @@ const Technologies = ({ setActive }: screenProps) => {
             </LayoutGroup>
           </motion.div>
         </div>
-      </>
+      </div>
     </Screen>
   )
 }

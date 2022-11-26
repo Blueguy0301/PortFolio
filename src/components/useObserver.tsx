@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
-import type { screenProps } from "../../types"
+import type { screenProps } from "../types"
 const useObserver = ({ setActive }: screenProps, name: string) => {
   const { ref, inView } = useInView({
     rootMargin: "0px",

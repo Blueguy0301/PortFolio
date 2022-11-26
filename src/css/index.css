@@ -8,10 +8,12 @@ html {
 @layer base {
   body {
     @apply bg-[#ffe7cc];
-    @apply overflow-x-hidden;
+    max-width: 100vw;
+    /* @apply overflow-x-hidden; */
   }
   #root {
-    @apply overflow-x-hidden;
+    max-width: 100vw;
+    /* @apply overflow-x-hidden; */
   }
   h1 {
     @apply text-6xl;

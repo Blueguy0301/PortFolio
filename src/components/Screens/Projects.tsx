@@ -9,7 +9,7 @@ import type { screenProps } from "../../types"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
-import useObserver from "./useObserver"
+import useObserver from "../useObserver"
 
 const SwiperData = {
   spaceBetween: 50,
@@ -38,9 +38,9 @@ const Projects = ({ setActive }: screenProps) => {
   }, [])
   const { ref } = useObserver({ setActive }, "Projects")
   return (
-    <Screen className="relative projects " id="projects" ref={ref}>
-      <>
-        <h1 className="absolute   top-20">
+    <Screen className="relative projects" id="projects" ref={ref}>
+      <div className="">
+        <h1 className="absolute top-20 w-full">
           <span className="md:bg-white p-3 rounded-xl ">Projects</span>
         </h1>
         <SideBar open={open} setOpen={setOpen} data={projectData} />
@@ -81,7 +81,7 @@ const Projects = ({ setActive }: screenProps) => {
             })}
           </Swiper>
         </div>
-      </>
+      </div>
     </Screen>
   )
 }

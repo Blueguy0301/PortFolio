@@ -1,4 +1,4 @@
-import type { ReactElement, Dispatch, SetStateAction } from "react"
+import type { ReactElement, Dispatch, SetStateAction, LegacyRef } from "react"
 export type screenProps = {
   setActive: Dispatch<SetStateAction<string>>
 }
@@ -37,3 +37,4 @@ export type techStack = { stack: string; skillType: string }
 export type loadingProps = {
   isLoading: boolean
 }
+export type screenRef = LegacyRef<HTMLDivElement> | undefined
