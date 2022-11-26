@@ -18,7 +18,7 @@ const certs = ({ setActive }: screenProps) => {
   }
   return (
     <Screen id="certificates" ref={ref}>
-      <div className="py-3 flex flex-wrap">
+      <>
         <h1>Certificates</h1>
         <div className="flex  gap-3 justify-evenly w-full flex-wrap p-5 ">
           <AnimatePresence>
@@ -35,7 +35,7 @@ const certs = ({ setActive }: screenProps) => {
           </AnimatePresence>
           <Modal showModal={open} link={imagelink} setModal={setOpen} />
         </div>
-      </div>
+      </>
     </Screen>
   )
 }

@@ -53,10 +53,11 @@ function App() {
         <m.div
           variants={menuVariant}
           animate={visible ? "visible" : "hidden"}
-          className="fixed bottom-10 z-50 flex w-full flex-wrap items-center justify-evenly gap-3 px-3"
+          className="fixed bottom-5 z-50 flex w-full flex-wrap items-center justify-evenly gap-3 p-5 bg-blue-800"
           initial="hidden"
           transition={{ delayChildren: 3 }}
         >
+          <h3 className="text-white w-full">Navigation</h3>
           <m.a
             onClick={onClickHandle}
             variants={anchorVariant}
