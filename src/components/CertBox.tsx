@@ -1,5 +1,4 @@
-import { useEffect, useMemo } from "react"
-import { useAnimation, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { certs } from "../types"
 const squareVariants = {

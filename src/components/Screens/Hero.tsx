@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react"
 import Screen from "../Screen"
-import { useInView } from "react-intersection-observer"
 import TypeWritter from "../TypeWritter"
 import type { screenProps } from "../../types"
 import useObserver from "../useObserver"

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import type { loadingProps } from "../types"
 
 const LoadingScreen = ({ isLoading }: loadingProps) => {

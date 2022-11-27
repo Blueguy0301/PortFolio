@@ -20,7 +20,7 @@ const AboutMe = ({ setActive }: screenProps) => {
           <h1 className="w-full">About Me</h1>
           <div className="w-1/2 text-center flex-grow ">
             <img
-              src="/assets/Profile.png"
+              src="/assets/Profile.jpeg"
               alt=""
               width="300"
               height="300"
