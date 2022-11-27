@@ -1,6 +1,5 @@
 import Screen from "../Screen"
-import { useEffect, useState } from "react"
-import { useInView } from "react-intersection-observer"
+
 import Facebook from "../svgs/Facebook"
 import Telegram from "../svgs/Telegram"
 import Mail from "../svgs/Mail"
@@ -21,7 +20,7 @@ const AboutMe = ({ setActive }: screenProps) => {
           <h1 className="w-full">About Me</h1>
           <div className="w-1/2 text-center flex-grow ">
             <img
-              src="/assets/Untitled.png"
+              src="/assets/Profile.png"
               alt=""
               width="300"
               height="300"
@@ -30,10 +29,10 @@ const AboutMe = ({ setActive }: screenProps) => {
             />
             <a
               className="button-small mt-5 inline-block "
-              href="/assets/resume.pdf"
+              href="/assets/resume.docx"
               download
             >
-              Download CV
+              Download Resume
             </a>
             <div className="bottom mt-20  flex flex-col justify-end flex-grow w-full ">
               <h3 className="">My Social Networks</h3>
