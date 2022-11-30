@@ -8,7 +8,7 @@ import "../../css/animations.css"
 import type { screenProps } from "../../types"
 import useObserver from "../useObserver"
 const AboutMe = ({ setActive }: screenProps) => {
-  const { ref, inView } = useObserver({ setActive }, "AboutMe")
+  const { ref } = useObserver({ setActive }, "AboutMe")
   return (
     <Screen
       className="relative w-full about bg-blue-500"
