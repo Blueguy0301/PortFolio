@@ -52,6 +52,19 @@ export const Projects = [
     image: "/assets/projects/Megane.png",
     repoLink: "https://github.com/Blueguy0301/Megane",
   },
+  {
+    title: "Genesis",
+    shortDesc: "A custom cli for NodeJs to create a project boilerplate",
+    Desc: "Genesis is a custom cli for nodejs that I created to automate the process of creating a project with a single command along with it's folder  structure. It is made with NodeJs and typescript",
+    Link: "#",
+    TechStack: ["NodeJS", "TypeScript"],
+    Features: [
+      "Automatically Create a boilerplate and install the node dependencies",
+      "Create once, automate the next time.",
+    ],
+    image: "/assets/projects/genesis.png",
+    repoLink: "https://github.com/Blueguy0301/genesis",
+  },
 ]
 
 export const all = [
