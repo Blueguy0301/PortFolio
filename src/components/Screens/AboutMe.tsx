@@ -50,7 +50,7 @@ const AboutMe = ({ setActive }: screenProps) => {
             <div className="flex-grow">
               <p className="text-justify bg-blue-700 text-white p-5 rounded-3xl mb-10 ">
                 I am 20 years old and a developer from The Philippines. I am a
-                self taught programmer for over 2 years. I am a full stack web
+                self taught programmer for over 3 years and counting. I am a full stack web
                 developer. Outside the screen, I am curious person that likes to
                 know how things work. I am also fond of reading and exploring
                 the things I am not familliar with.
