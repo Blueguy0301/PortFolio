@@ -40,9 +40,9 @@ export const Projects = [
   {
     title: "Megane",
     shortDesc: "A point of sales and inventory management system.",
-    Desc: "Megane (眼鏡) or eye glass in English is a system I developed for using it to our shop. It is built with React as its' frontend framework with Sass for CSS preprocessor and PHP and MYSQL as its' backend API and database.",
+    Desc: "Megane (眼鏡) or eye glass in English is a system I developed for using it to our shop. It is built with React and Next13, with CochroachDB as its database.",
     Link: "#",
-    TechStack: ["React", "MYSQL", "PHP", "Sass"],
+    TechStack: ["React"],
     Features: [
       "Automatically adds/subtracts product with a scan",
       "Supports all barcodes and QR code.",
@@ -50,7 +50,7 @@ export const Projects = [
       "Invoicing Purchase History, Credits, Daily income and total profit",
     ],
     image: "/assets/projects/Megane.png",
-    repoLink: "https://github.com/Blueguy0301/Megane",
+    repoLink: "https://github.com/Blueguy0301/Megane-next",
   },
   {
     title: "Genesis",
