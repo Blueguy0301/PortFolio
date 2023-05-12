@@ -29,7 +29,7 @@ const AboutMe = ({ setActive }: screenProps) => {
             />
             <a
               className="button-small mt-5 inline-block "
-              href="/assets/resume.docx"
+              href="/assets/Resume (2).pdf"
               download
             >
               Download Resume
