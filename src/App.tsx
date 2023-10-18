@@ -45,7 +45,7 @@ const Certs = lazy(() => import("./components/Screens/Certs"))
 function App() {
   const [active, setActive] = useState("")
   const [visible, setVisible] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading] = useState(true)
   const onClickHandle = () => setVisible(false)
   return (
     <>
@@ -142,9 +142,9 @@ function App() {
       <Hero setActive={setActive} />
       <Suspense fallback={<LoadingScreen isLoading={isLoading} />}>
         <AboutMe setActive={setActive} />
-        <Projects setActive={setActive} />
+        {/* <Projects setActive={setActive} /> */}
         <Technologies setActive={setActive} />
-        <Certs setActive={setActive} />
+        {/* <Certs setActive={setActive} />/ */}
       </Suspense>
     </>
   )

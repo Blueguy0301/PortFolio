@@ -41,7 +41,7 @@ const Technologies = ({ setActive }: screenProps) => {
   const { ref } = useObserver({ setActive }, "Technologies")
   return (
     <Screen className="flex-col relative" id="techs" ref={ref}>
-      <div className="py-3">
+      <div className="py-3 w-full">
         <h1 className="tech leading-normal w-full">Technologies</h1>
         <div className="btn-group">
           {buttons.map((buttonName) => (

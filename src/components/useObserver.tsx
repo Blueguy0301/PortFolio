@@ -9,6 +9,11 @@ const useObserver = ({ setActive }: screenProps, name: string) => {
   useEffect(() => {
     if (inView) {
       setActive(name)
+      // set scroll of id to 0
+      const element = document.getElementById(name)
+      // set elemet scroll postion to 0
+      element?.scrollTo(0, 0)
+      console.log("set scroll of id to 0")
     }
     return () => {}
   }, [inView])

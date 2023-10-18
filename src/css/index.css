@@ -7,12 +7,17 @@ html {
 }
 @layer base {
   body {
+    /* set proximity */
     @apply bg-[#ffe7cc];
-    max-width: 100vw;
     /* @apply overflow-x-hidden; */
   }
   #root {
+    height: 100vh;
+    max-height: 100vh;
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
     max-width: 100vw;
+    /* scroll-snap-points-y: repeat(100vh); */
     /* @apply overflow-x-hidden; */
   }
   h1 {
@@ -56,20 +61,7 @@ html {
   margin-top: 1rem;
   margin-bottom: auto;
 }
-.left {
-  @apply bg-blue-700;
-  @apply z-20;
-  width: 50% !important;
-}
-#left {
-  @apply text-[#FFE7CC];
-}
-#right {
-  @apply text-blue-700;
-}
-.right {
-  @apply bg-[#FFE7CC];
-}
+
 .hero-text {
   @apply text-6xl;
   margin: 0px 10vw;
@@ -80,14 +72,29 @@ html {
   position: absolute;
   z-index: -1;
 }
-.side {
-  @apply grid;
-  @apply place-items-end;
-  position: absolute;
-  overflow: hidden;
+.wrapper {
   height: 100vh;
-  width: 100%;
+  z-index: -1;
   position: absolute;
+  background-image: url(./assets/logo.png);
+  @apply flex items-center justify-center flex-col;
+  max-height: 100vh;
+  width: 100%;
+  background-repeat: repeat;
+  animation: marquee 60s infinite linear;
+  filter: blur(10px);
+}
+@keyframes marquee {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: -8190px -8190px;
+  }
+}
+.side {
+  max-width: 100%;
 }
 .bottom {
   @apply mb-0;
@@ -140,8 +147,10 @@ html {
 }
 .swiper-projects {
   width: 100%;
+  flex-grow: 1;
+  height: 100%;
   /* min-height: 100px; */
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 .image {
   pointer-events: none;
@@ -248,8 +257,11 @@ html {
   min-height: 50vh;
 }
 .screen {
+  @apply overflow-auto h-screen scrollbar-none;
+  scroll-snap-align: start;
   min-height: 100vh;
   max-width: 100%;
+  max-height: 100vh !important;
 }
 .active {
   background-color: #ffe7cc !important;
@@ -260,9 +272,12 @@ html {
 }
 .about {
   background-color: #ffe7cc;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%233E6D9C'/%3E%3Cstop offset='1' stop-color='%233E6D9C'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%233E6D9C'/%3E%3Cstop offset='1' stop-color='%233E6D9C'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='9.899999999999999'%3E%3Cpath transform='translate(-185.5 -13.600000000000001) rotate(-23.5 1409 581) scale(0.7462)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='3.3000000000000003' transform='translate(-316 166) rotate(-0.1999999999999993 800 450) scale(0.9813499999999998)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(-10.600000000000001 -48) rotate(-52 401 736) scale(0.9813499999999998)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='3'%3E%3Cpath transform='translate(996 33.6) rotate(-8.4 150 345) scale(1.0274)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='6.6000000000000005' transform='translate(-114 -465) rotate(-122.4 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-436 92) rotate(-20.4 1400 132) scale(0.5)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%233E6D9C'/%3E%3Cstop offset='1' stop-color='%233E6D9C'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%233E6D9C'/%3E%3Cstop offset='1' stop-color='%233E6D9C'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='9.899999999999999'%3E%3Cpath transform='translate(-185.5 -13.600000000000001) rotate(-23.5 1409 581) scale(0.7462)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='3.3000000000000003' transform='translate(-316 166) rotate(-0.1999999999999993 800 450) scale(0.9813499999999998)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(-10.600000000000001 -48) rotate(-52 401 736) scale(0.9813499999999998)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='3'%3E%3Cpath transform='translate(996 33.6) rotate(-8.4 150 345) scale(1.0274)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='6.6000000000000005' transform='translate(-114 -465) rotate(-122.4 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-436 92) rotate(-20.4 1400 132) scale(0.5)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+  background-image: url("./assets/shapes.png");
+  /* set to background fixed */
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 /* LOADING ANIMATION STUFF */
 .lds-ellipsis {

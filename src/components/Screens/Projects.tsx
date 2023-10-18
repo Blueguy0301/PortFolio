@@ -1,3 +1,4 @@
+import type { screenProps } from "../../types"
 import { useCallback, useState, useEffect } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Pagination, Navigation } from "swiper"
@@ -5,7 +6,6 @@ import Screen from "../Screen"
 import SideBar from "../SideBar"
 import { Projects as projectsMade } from "../Data"
 import { useInView } from "react-intersection-observer"
-import type { screenProps } from "../../types"
 import "swiper/css"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
@@ -40,9 +40,9 @@ const Projects = ({ setActive }: screenProps) => {
   return (
     <Screen className="relative projects" id="projects" ref={ref}>
       <div className="">
-        <h1 className="absolute top-20 w-full">
+        {/* <h1 className="absolute top-20 w-full">
           <span className="md:bg-white p-3 rounded-xl ">Projects</span>
-        </h1>
+        </h1> */}
         <SideBar open={open} setOpen={setOpen} data={projectData} />
 
         <div className="flex-grow flex justify-center">
