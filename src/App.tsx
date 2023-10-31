@@ -143,7 +143,7 @@ function App() {
       <Suspense fallback={<LoadingScreen isLoading={isLoading} />}>
         <AboutMe setActive={setActive} />
         {/* <Projects setActive={setActive} /> */}
-        <Technologies setActive={setActive} />
+        {/* <Technologies setActive={setActive} /> */}
         {/* <Certs setActive={setActive} />/ */}
       </Suspense>
     </>

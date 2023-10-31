@@ -7,19 +7,47 @@ import Github from "../svgs/Github"
 import "../../css/animations.css"
 import type { screenProps } from "../../types"
 import useObserver from "../useObserver"
+import { useEffect } from "react"
 const AboutMe = ({ setActive }: screenProps) => {
   const { ref } = useObserver({ setActive }, "AboutMe")
+
+  useEffect(() => {
+    //create function that will check if the element is in the viewport
+    const checkIfInViewPort = () => {
+      const element = document.getElementById("AboutMe")
+      if (element) {
+        const rect = element.getBoundingClientRect()
+        const isInViewPort =
+          rect.top >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight)
+        if (isInViewPort) {
+          // set the id with top bottom left right to animate
+          const top = document.getElementById("top")
+          const bottom = document.getElementById("bottom")
+          const left = document.getElementById("left")
+          const right = document.getElementById("right")
+          if (top && bottom && left && right) {
+            top.classList.add("top")
+            bottom.classList.add("bottom")
+            left.classList.add("left")
+            right.classList.add("right")
+          }
+        }
+      }
+    }
+  }, [])
   return (
     <Screen
       className="relative w-full about bg-blue-500"
       id="AboutMe"
       ref={ref}
     >
-      <div className="py-3 flex flex-wrap">
+      <div className="py-3 flex flex-wrap w-full">
         <h1 className="w-full">About Me</h1>
         <div className="w-1/2 text-center flex-grow ">
           <img
-            src="/assets/Profile.jpeg"
+            src="/assets/Profile.png"
             alt=""
             width="300"
             height="300"
@@ -34,7 +62,7 @@ const AboutMe = ({ setActive }: screenProps) => {
             Download Resume
           </a>
           <div className="bottom mt-20  flex flex-col justify-end flex-grow w-full ">
-            <h3 className="">My Social Networks</h3>
+            <h3 className="">Socials</h3>
             <div className="flex flex-wrap items-center justify-evenly flex-row  gap-3">
               <div className="grow flex justify-evenly items-center">
                 <Telegram />
@@ -45,15 +73,35 @@ const AboutMe = ({ setActive }: screenProps) => {
             </div>
           </div>
         </div>
-        <div className="flex-grow w-1/2 px-5  basis-96">
-          <div className="flex-grow">
-            <p className="text-justify bg-blue-700 text-white p-5 rounded-3xl mb-10 ">
-              I am 20 years old and a developer from The Philippines. I am a
-              self taught programmer for over 3 years and counting. I am a full
-              stack web developer. Outside the screen, I am curious person that
-              likes to know how things work. I am also fond of reading and
-              exploring the things I am not familliar with.
-            </p>
+        <div className="flex-grow min-w-1/2 px-5  basis-96 ">
+          <div className="flex-grow ">
+            <div className="relative h-80">
+              <img
+                src="/assets/iceCream/Caramel.png"
+                alt=""
+                className="absolute move"
+                id="top"
+              />
+              <img
+                src="/assets/iceCream/Cone.png"
+                alt=""
+                id="bottom"
+                className="absolute move"
+              />
+              <img
+                src="/assets/iceCream/Sprinkles.png"
+                alt=""
+                className="absolute move"
+                id="left"
+              />
+              <img
+                src="/assets/iceCream/Vanilla.png"
+                alt=""
+                id="right"
+                className="absolute move"
+              />
+            </div>
+
             <div className="bg-blue-700 text-white p-5 rounded-3xl ">
               <h3 className="text-left text-white"> My hobbies are...</h3>
               <ul className="list-decimal ml-10">

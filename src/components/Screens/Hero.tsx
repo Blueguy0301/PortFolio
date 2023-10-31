@@ -10,10 +10,10 @@ const Hero = ({ setActive }: screenProps) => {
       <div className="relative flex flex-col items-center w-full justify-center">
         <div className="wrapper "></div>
         <div className="side z-10">
-          <h1 className="hero-text" id="right">
+          <h1 className="hero-text" id="Right">
             {heroText}
           </h1>
-          <TypeWritter id="right" />
+          <TypeWritter id="Right" />
         </div>
       </div>
     </Screen>
