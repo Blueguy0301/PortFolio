@@ -39,17 +39,16 @@ const Projects = ({ setActive }: screenProps) => {
   const { ref } = useObserver({ setActive }, "Projects")
   return (
     <Screen className="relative projects" id="projects" ref={ref}>
-      <div className="">
-        {/* <h1 className="absolute top-20 w-full">
-          <span className="md:bg-white p-3 rounded-xl ">Projects</span>
-        </h1> */}
+      <div className="flex flex-col justify-center flex-grow ">
+        <h1 className="w-full">
+          <span className="p-3 ">Projects</span>
+        </h1>
         <SideBar open={open} setOpen={setOpen} data={projectData} />
-
-        <div className="flex-grow flex justify-center">
+        <div className="flex-grow flex justify-center mt-auto">
           <Swiper {...SwiperData}>
             {projectsMade.map((project) => {
               return (
-                <SwiperSlide className="relative" key={project.title}>
+                <SwiperSlide className="relative " key={project.title}>
                   <img
                     src={project.image}
                     alt="screenshot of the project"

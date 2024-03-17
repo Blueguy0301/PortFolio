@@ -142,9 +142,9 @@ function App() {
       <Hero setActive={setActive} />
       <Suspense fallback={<LoadingScreen isLoading={isLoading} />}>
         <AboutMe setActive={setActive} />
-        {/* <Projects setActive={setActive} /> */}
-        {/* <Technologies setActive={setActive} /> */}
-        {/* <Certs setActive={setActive} />/ */}
+        <Projects setActive={setActive} />
+        <Technologies setActive={setActive} />
+        <Certs setActive={setActive} />/
       </Suspense>
     </>
   )
