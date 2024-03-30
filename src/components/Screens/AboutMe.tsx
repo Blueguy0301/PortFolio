@@ -75,7 +75,7 @@ const AboutMe = ({ setActive }: screenProps) => {
         </div>
         <div className="flex-grow min-w-1/2 px-5  basis-96 ">
           <div className="flex-grow ">
-            <div className="relative h-80">
+            <div className="relative h-96">
               <img
                 src="/assets/iceCream/Caramel.png"
                 alt=""

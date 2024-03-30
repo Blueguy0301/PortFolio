@@ -41,7 +41,7 @@ const AboutMe = lazy(async () => import("./components/Screens/AboutMe"))
 const Technologies = lazy(() => import("./components/Screens/Technologies"))
 const Projects = lazy(() => import("./components/Screens/Projects"))
 const Certs = lazy(() => import("./components/Screens/Certs"))
-
+const Sep = lazy(() => import("./components/Screens/Sep"))
 function App() {
   const [active, setActive] = useState("")
   const [visible, setVisible] = useState(false)
@@ -144,7 +144,8 @@ function App() {
         <AboutMe setActive={setActive} />
         <Projects setActive={setActive} />
         <Technologies setActive={setActive} />
-        <Certs setActive={setActive} />/
+        {/* <Certs setActive={setActive} />/ */}
+        <Sep />
       </Suspense>
     </>
   )
