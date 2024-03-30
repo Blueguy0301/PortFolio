@@ -13,7 +13,7 @@ const Text = (props: props) => {
         <h3 className="text-center text-5xl py-3">{props.title}</h3>
         {props.img && <img src={props.img} className=" max-h-full" />}
       </div>
-      <span className="flex flex-row flex-wrap break-words text-justify items-center justify-center text-xl px-3 max-w-full md:!max-w-[50%] overflow-auto">
+      <span className="flex flex-row flex-wrap break-words text-justify items-center justify-center text-xl px-3 max-w-full md:!max-w-[50%] overflow-auto w-full">
         {props.children}
       </span>
     </Screen>

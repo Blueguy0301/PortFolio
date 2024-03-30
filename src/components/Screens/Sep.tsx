@@ -24,10 +24,7 @@ const Sep = () => {
 
   return (
     <>
-      <Screen className="p-3 flex flex-col">
-        <h1 className="tech leading-normal w-full">
-          Specialized English Subject
-        </h1>
+      <Text title="Specilized English Subject">
         <div
           style={{
             position: "relative",
@@ -42,6 +39,7 @@ const Sep = () => {
             borderRadius: "8px",
             willChange: "transform",
           }}
+          className="flex-grow w-full h-full "
         >
           <Iframe
             styles={{
@@ -58,15 +56,7 @@ const Sep = () => {
             allow="fullscreen"
           />
         </div>
-        <a
-          href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAF-PiJUq6s&#x2F;1stLS-bhdvLvuhJ7VKCFbQ&#x2F;view?utm_content=DAF-PiJUq6s&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
-          target="_blank"
-          rel="noopener"
-          className="text-blue-500 underline "
-        >
-          My Portfolio
-        </a>
-      </Screen>
+      </Text>
       <Text
         title="Why Read?"
         img="https://images.pexels.com/photos/4132936/pexels-photo-4132936.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -116,8 +106,18 @@ const Sep = () => {
         <span className="max-w-full">
           Sources:
           <br />
-          https://www.sciencedirect.com/science/article/abs/pii/S0272775711000483
-          https://newsinfo.inquirer.net/1871182/pisa-ph-students-still-among-lowest-scorers
+          <a
+            href="https://www.sciencedirect.com/science/article/abs/pii/S0272775711000483"
+            className="text-underline text-blue-500"
+          >
+            https://www.sciencedirect.com/science/article/abs/pii/S0272775711000483
+          </a>
+          <a
+            href="https://newsinfo.inquirer.net/1871182/pisa-ph-students-still-among-lowest-scorers"
+            className="text-underline text-blue-500"
+          >
+            https://newsinfo.inquirer.net/1871182/pisa-ph-students-still-among-lowest-scorers
+          </a>
         </span>
       </Text>
       <Text
