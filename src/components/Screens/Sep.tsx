@@ -216,7 +216,7 @@ const Sep = () => {
           </SwiperSlide>
           <SwiperSlide>
             <Iframe
-              url="/assets/SEP/READING+PROCESS+WORKSHEET+D3+T12122 (1).pdf"
+              url="/assets/SEP/READING%2BPROCESS%2BWORKSHEET%2BD3%2BT12122%20(1).pdf"
               className="w-full  h-full"
             ></Iframe>
           </SwiperSlide>
