@@ -206,7 +206,7 @@ const Sep = () => {
         you and hook you into the world of literature.
       </Text>
 
-      <Text title="Reader's Reponse">
+      <Text title="Reader's Reponse and I-Care activities">
         <Swiper {...SwiperData}>
           <SwiperSlide>
             <Iframe
@@ -228,22 +228,53 @@ const Sep = () => {
           </SwiperSlide>
         </Swiper>
       </Text>
-      <Text title="What I've learned">
-      Studying specialized English subjects has been a journey of discovery and growth, offering insights into language nuances, cultural contexts, and professional applications. In this document, I share some of the key lessons I've learned in my exploration of specialized English subjects, highlighting their significance and relevance in various domains.
-
-Specialized English subjects have taught me the importance of precision in technical writing. Whether it's crafting scientific reports, engineering documentation, or legal briefs, clarity and accuracy are paramount. I've learned to use language with meticulous attention to detail, ensuring that my writing effectively communicates complex concepts to a specific audience.
-
-Each specialized field has its own unique tone and style conventions. I've learned to adapt my writing style to suit the requirements of different contexts, whether formal, informal, academic, or professional. Understanding the nuances of tone and style enables me to effectively communicate with diverse audiences and convey information in a manner that resonates with them.
-
-Specialized English subjects have introduced me to the concept of discourse communities – groups of individuals who share common goals, interests, and communication practices within a particular field or profession. I've learned to navigate these communities by familiarizing myself with their language norms, conventions, and specialized terminology. By understanding the discourse of a community, I can participate more effectively in discussions, collaborations, and knowledge sharing.
-
-In specialized English study, research and citation practices are fundamental skills for producing credible and scholarly work. I've learned to conduct thorough research using reliable sources and to cite references accurately according to established citation styles such as APA, MLA, or Chicago. These practices not only uphold academic integrity but also demonstrate respect for the work of others and provide transparency in scholarly communication.
-
-Language is deeply intertwined with culture, and understanding cultural nuances is essential for effective communication in global contexts. I've learned to approach language with cultural sensitivity, recognizing that words and expressions may carry different meanings or connotations across cultures. By cultivating cross-cultural awareness, I can navigate cultural differences with respect and adapt my communication to foster mutual understanding and collaboration.
-
-Specialized English study has provided me with opportunities for professional development and networking within my field of interest. I've learned the importance of actively engaging with professional associations, attending conferences, and participating in online forums and communities. These activities not only expand my knowledge and skills but also enable me to connect with peers, mentors, and potential collaborators, enriching my professional journey.
-
-Reflecting on my experience with specialized English subjects, I'm reminded of the profound impact they've had on my language proficiency, cultural awareness, and professional growth. Each lesson learned has equipped me with valuable skills and insights that continue to shape my academic and professional endeavors. As I continue to explore and engage with specialized English study, I look forward to further expanding my knowledge and contributing to the vibrant discourse of my chosen field.
+      <Text
+        title="Reflecting on My experience on Specialized English Subject"
+        img="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      >
+        Reflecting on My experience on Specialized English Subject As I part my
+        ways through the subject, I find myself contemplating the transformative
+        impact it has had on my language skills, critical thinking abilities,
+        and overall academic development. This essay encapsulates the gist of my
+        experience, saying the challenges I faced, the lessons I learned, and
+        the growth achieved along the way.
+        <br />
+        <br />
+        The journey started with a sense of curiosity and anticipation, as I
+        stat on a quest to dive deeper into the nuances of the language. From
+        the outside, I faced a plethora of literary works, linguistic theories,
+        and analytical frameworks that expanded my understanding of the subject.
+        Engaging in rigorous discussions, dissecting complex texts, and honing
+        my writing prowess became the cornerstone of this academic expedition.
+        <br />
+        <br />
+        However, navigating through the intricacies of specialized English was
+        not without its hurdles. I grappled with deciphering esoteric literary
+        devices, and articulating intricate concepts with precision. Yet, each
+        obstacle served as a catalyst for growth, pushing me to surpass my
+        intellectual boundaries and refine my analytical skills. Through
+        perseverance and resilience, I am gradually mastering the art of
+        deciphering cryptic texts and crafting insightful interpretations.
+        <br />
+        <br />
+        Furthermore, the learning approach adopted in specialized English
+        nurtured autonomy and self-directed learning, empowering me to take
+        ownership of my intellectual journey. Encouraged to explore topics of
+        personal interest, conduct independent research, and pursue creative
+        endeavors, I discovered the intrinsic joy of intellectual exploration.
+        Whether diving into the works of renowned authors, dissecting linguistic
+        phenomena, or crafting original compositions, each endeavor came with a
+        sense of purpose and fulfillment.
+        <br />
+        <br />
+        As I bid my farewell to the subject, I emerge not only as a proficient
+        linguist but also as a discerning critic, a creative thinker, and a
+        lifelong learner. The invaluable lessons learned, the friendships
+        forged, and the intellectual growth achieved serve as a testament to the
+        transformative power of education. Armed with newfound knowledge and
+        fortified by the challenges overcome, I embark on future endeavors with
+        a sense of confidence, curiosity, and a profound appreciation for the
+        boundless possibilities that lie ahead.
       </Text>
     </>
   )
