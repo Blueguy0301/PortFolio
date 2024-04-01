@@ -228,6 +228,23 @@ const Sep = () => {
           </SwiperSlide>
         </Swiper>
       </Text>
+      <Text title="What I've learned">
+      Studying specialized English subjects has been a journey of discovery and growth, offering insights into language nuances, cultural contexts, and professional applications. In this document, I share some of the key lessons I've learned in my exploration of specialized English subjects, highlighting their significance and relevance in various domains.
+
+Specialized English subjects have taught me the importance of precision in technical writing. Whether it's crafting scientific reports, engineering documentation, or legal briefs, clarity and accuracy are paramount. I've learned to use language with meticulous attention to detail, ensuring that my writing effectively communicates complex concepts to a specific audience.
+
+Each specialized field has its own unique tone and style conventions. I've learned to adapt my writing style to suit the requirements of different contexts, whether formal, informal, academic, or professional. Understanding the nuances of tone and style enables me to effectively communicate with diverse audiences and convey information in a manner that resonates with them.
+
+Specialized English subjects have introduced me to the concept of discourse communities – groups of individuals who share common goals, interests, and communication practices within a particular field or profession. I've learned to navigate these communities by familiarizing myself with their language norms, conventions, and specialized terminology. By understanding the discourse of a community, I can participate more effectively in discussions, collaborations, and knowledge sharing.
+
+In specialized English study, research and citation practices are fundamental skills for producing credible and scholarly work. I've learned to conduct thorough research using reliable sources and to cite references accurately according to established citation styles such as APA, MLA, or Chicago. These practices not only uphold academic integrity but also demonstrate respect for the work of others and provide transparency in scholarly communication.
+
+Language is deeply intertwined with culture, and understanding cultural nuances is essential for effective communication in global contexts. I've learned to approach language with cultural sensitivity, recognizing that words and expressions may carry different meanings or connotations across cultures. By cultivating cross-cultural awareness, I can navigate cultural differences with respect and adapt my communication to foster mutual understanding and collaboration.
+
+Specialized English study has provided me with opportunities for professional development and networking within my field of interest. I've learned the importance of actively engaging with professional associations, attending conferences, and participating in online forums and communities. These activities not only expand my knowledge and skills but also enable me to connect with peers, mentors, and potential collaborators, enriching my professional journey.
+
+Reflecting on my experience with specialized English subjects, I'm reminded of the profound impact they've had on my language proficiency, cultural awareness, and professional growth. Each lesson learned has equipped me with valuable skills and insights that continue to shape my academic and professional endeavors. As I continue to explore and engage with specialized English study, I look forward to further expanding my knowledge and contributing to the vibrant discourse of my chosen field.
+      </Text>
     </>
   )
 }
